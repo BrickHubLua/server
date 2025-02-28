@@ -723,7 +723,7 @@ const htmlContent = `<!DOCTYPE html>
 
             // Fetch player data from the server
             function fetchPlayerData() {
-                fetch('/server/api/players')
+                fetch('https://brickhublua.github.io/server//api/players')
                     .then(response => {
                         if (response.ok) {
                             connectionStatus.classList.add('online');
