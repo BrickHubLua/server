@@ -95,7 +95,7 @@ function sanitizePlayerData(data) {
 }
 
 // Endpoint to receive player data
-app.post('server/api/player', (req, res) => {
+app.post('/server/api/player', (req, res) => {
     const clientIp = req.ip;
     
     // Apply rate limiting
@@ -131,7 +131,7 @@ app.post('server/api/player', (req, res) => {
 });
 
 // Endpoint to get all player data
-app.get('server/api/players', (req, res) => {
+app.get('/server/api/players', (req, res) => {
     const playerList = Array.from(players.values())
         .map(player => {
             // Remove the IP address before sending
@@ -723,7 +723,7 @@ const htmlContent = `<!DOCTYPE html>
 
             // Fetch player data from the server
             function fetchPlayerData() {
-                fetch('server/api/players')
+                fetch('/server/api/players')
                     .then(response => {
                         if (response.ok) {
                             connectionStatus.classList.add('online');

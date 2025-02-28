@@ -573,7 +573,7 @@
 
             // Fetch player data from the server
             function fetchPlayerData() {
-                fetch('server/api/players')
+                fetch('/server/api/players')
                     .then(response => {
                         if (response.ok) {
                             connectionStatus.classList.add('online');
